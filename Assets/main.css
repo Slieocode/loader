@@ -1,0 +1,138 @@
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+.title{
+	width: 400px;
+	margin:50px auto;
+	font-family: monospace;
+	text-align: center;
+	font-size:22px;
+}
+
+.title p{
+	font-size:15px;
+	padding: 10px;
+	line-height: 1.7;
+	color:#6f6565 !important;
+}
+
+.v-container{
+	display: flex;
+	padding:10px;
+	justify-content: center;
+	text-align: center;
+}
+
+.border{
+	width:100%;
+ 	display: flex;
+ 	justify-content: center;
+	text-align: center;
+    align-items: flex-end;
+	padding: 10px;
+}
+.second .border{
+	margin:100px auto;
+}
+.autorotate{
+	width:100%;
+	align-items: flex-end;
+	margin: 10px;
+	padding: 5px;
+	background:#2D87A1;
+	color:#fff;
+	font-family: monospace;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+	position: absolute;
+	z-index: 999;
+}
+
+.view360{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 99;
+
+}
+
+.slider {
+  width: 100%; /* Full-width */
+  height: 100%; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+    position: absolute;
+    display: none;
+    opacity: 0;
+
+}
+
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 80%; /* Set a specific slider handle width */
+  height: 100%; /* Slider handle height */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+
+@media screen and (max-width:1280px){
+
+	.v-container{
+		flex-direction: column;
+	}
+	canvas{
+		width:600px;
+	}
+	.prod{
+		width:600px !important
+	}
+	.slider{
+		display: block;
+	}
+
+}
+
+@media screen and (max-width:992px){
+	.border{
+	}
+	.slider{
+		display: block;
+	}
+}
+
+@media screen and (max-width:768px){
+	.border{
+		transform:scale(.8);
+		margin:0 auto;
+	}
+
+	.second .border{
+		margin:50px auto;
+	}
+}
+
+@media screen and (max-width:576px){
+	.border{
+		transform:scale(.6);
+		margin:0 auto;
+	}
+	.second .border{
+		margin:0 auto !important;
+	}
+
+}
