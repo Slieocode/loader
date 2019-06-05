@@ -271,8 +271,7 @@ $.fn.rotate = function(options){
        });
    };
 
-//  Script Initialization:
-$(window).load(function(){
+//  Script Initialization
   $(".p-1").rotate({
     imageDir:'images/product-1',
     imageCount:36, // How Many Images
@@ -312,7 +311,6 @@ $(window).load(function(){
     canvasHeight:420,
     autoRotate:false // Auto Rotate is set to false.
     });
-});
 })(jQuery);
 
     var Body = $('body');
@@ -320,9 +318,6 @@ $(window).load(function(){
 });
 
 $(window).load(function() {
-    $('.preloader-wrapper').fadeOut();
-    $('body').removeClass('preloader-site');
-});
-
-
-
+  $(".loader").delay(2000).fadeOut("slow");
+  $("#overlayer").delay(2000).fadeOut("slow");
+})
