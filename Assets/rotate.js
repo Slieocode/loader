@@ -1,3 +1,4 @@
+$(document).ready(function($) {
 (function($){
       var Rotate   = function(element, options){
       var view360  = $(element);
@@ -99,7 +100,7 @@ var init_= function(){
 
 view360.css({width:options.canvasWidth + "px",height:options.canvasHeight + "px",position:'relative'});
 
-view360.find('.autorotate').css({position:'absolute', right:"1%",bottom:'-28%',display:'block',padding:'5px'});
+view360.find('.autorotate').css({position:'absolute', right:"1%",display:'block',padding:'5px'});
 
 
 canvas  = document.getElementsByClassName(options.canvasID);
@@ -294,7 +295,7 @@ $(window).load(function(){
 
     $(".p-3").rotate({
     imageDir:'images/product-3',
-    imageCount:36, // How Many Images
+    imageCount:72, // How Many Images
     imageExt:'jpg', // Image Extention
     canvasID:'Product-3',
     canvasWidth:530,
@@ -303,8 +304,8 @@ $(window).load(function(){
     });
 
     $(".p-4").rotate({
-    imageDir:'images/product-4',
-    imageCount:72, // How Many Images
+    imageDir:'images/product-1',
+    imageCount:36, // How Many Images
     imageExt:'jpg', // Image Extention
     canvasID:'Product-4',
     canvasWidth:530,
@@ -314,10 +315,10 @@ $(window).load(function(){
 });
 })(jQuery);
 
-$(document).ready(function($) {
     var Body = $('body');
     Body.addClass('preloader-site');
 });
+
 $(window).load(function() {
     $('.preloader-wrapper').fadeOut();
     $('body').removeClass('preloader-site');
